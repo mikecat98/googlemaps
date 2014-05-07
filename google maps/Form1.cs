@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
 
 namespace google_maps
 {
@@ -19,7 +20,13 @@ namespace google_maps
        double y=0;
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            trackBar1.s
+            label1.Text = "" + trackBar1.Value;
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
