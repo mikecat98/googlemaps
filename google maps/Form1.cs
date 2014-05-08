@@ -17,15 +17,29 @@ namespace google_maps
         {
             InitializeComponent();
         }
-       double y=0;
+        string streetadd, cityname;
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            label1.Text = "" + trackBar1.Value;
 
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            streetadd = textBox1.Text;
+            cityname = textBox2.Text;
+            WebRequest requestPic = WebRequest.Create("http://maps.googleapis.com/maps/api/staticmap?center="+streetadd+","+cityname+ "&zoom=11&size=200x200&sensor=false");
+            WebResponse repsonsePic = requestPic.GetResponse();
+            Image map = Image.FromStream(repsonsePic.GetResponseStream());
+            pictureBox1.Image = map;
+            requestPic = WebRequest.Create("http://maps.googleapis.com/maps/api/streetview?size=200x200&location=&heading=235&sensor=false");
+            repsonsePic = requestPic.GetResponse();
+            map = Image.FromStream(repsonsePic.GetResponseStream());
+            pictureBox2.Image = map;
 
         }
     }

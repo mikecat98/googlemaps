@@ -60,10 +60,9 @@
             // trackBar1
             // 
             this.trackBar1.BackColor = System.Drawing.SystemColors.Control;
-            this.trackBar1.Location = new System.Drawing.Point(3, 40);
+            this.trackBar1.Location = new System.Drawing.Point(22, 396);
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(45, 350);
+            this.trackBar1.Size = new System.Drawing.Size(350, 45);
             this.trackBar1.TabIndex = 2;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
@@ -88,26 +87,31 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(48, 436);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox1.Location = new System.Drawing.Point(22, 434);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(143, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Street Address";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 436);
+            this.textBox2.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textBox2.Location = new System.Drawing.Point(171, 434);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(143, 20);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Text = "City";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(271, 433);
+            this.button1.Location = new System.Drawing.Point(320, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
